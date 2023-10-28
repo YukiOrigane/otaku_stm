@@ -1,0 +1,19 @@
+21:14:03 **** Incremental Build of configuration Debug for project test_adc ****
+make -j20 all 
+arm-none-eabi-gcc -o "test_adc.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\origane\OneDrive - m.titech.ac.jp\08_rogy\2023_MFT\programming\L010\test_adc\STM32L010F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_adc.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_adc.elf
+ 
+arm-none-eabi-size   test_adc.elf 
+arm-none-eabi-objdump -h -S  test_adc.elf  > "test_adc.list"
+arm-none-eabi-objcopy  -O binary  test_adc.elf  "test_adc.bin"
+   text	   data	    bss	    dec	    hex	filename
+    792	     12	   1572	   2376	    948	test_adc.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_adc.bin
+Finished building: test_adc.list
+ 
+ 
+
+21:14:03 Build Finished. 0 errors, 0 warnings. (took 285ms)
+

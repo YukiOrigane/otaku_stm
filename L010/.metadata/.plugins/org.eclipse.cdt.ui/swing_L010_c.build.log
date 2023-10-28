@@ -1,0 +1,20 @@
+10:12:12 **** Incremental Build of configuration Debug for project swing_L010_c ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L010x4 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "swing_L010_c.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\origane\OneDrive - m.titech.ac.jp\08_rogy\otaku_simulator\STM\swing_L010_c\STM32L010F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="swing_L010_c.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: swing_L010_c.elf
+ 
+arm-none-eabi-size   swing_L010_c.elf 
+arm-none-eabi-objdump -h -S  swing_L010_c.elf  > "swing_L010_c.list"
+arm-none-eabi-objcopy  -O binary  swing_L010_c.elf  "swing_L010_c.bin"
+   text	   data	    bss	    dec	    hex	filename
+  13896	     20	   1788	  15704	   3d58	swing_L010_c.elf
+Finished building: default.size.stdout
+ 
+Finished building: swing_L010_c.bin
+ 
+Finished building: swing_L010_c.list
+ 
+
+10:12:13 Build Finished. 0 errors, 0 warnings. (took 438ms)
+

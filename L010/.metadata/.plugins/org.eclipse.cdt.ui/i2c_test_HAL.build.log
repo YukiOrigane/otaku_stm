@@ -1,0 +1,10 @@
+20:15:38 **** Incremental Build of configuration Debug for project i2c_test_HAL ****
+make -j20 all 
+arm-none-eabi-size   i2c_test_HAL.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9408	     20	   1652	  11080	   2b48	i2c_test_HAL.elf
+Finished building: default.size.stdout
+ 
+
+20:15:39 Build Finished. 0 errors, 0 warnings. (took 131ms)
+

@@ -1,0 +1,10 @@
+09:54:09 **** Incremental Build of configuration Debug for project test_GPIO_HAL ****
+make -j20 all 
+arm-none-eabi-size   test_GPIO_HAL.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6096	     20	   1572	   7688	   1e08	test_GPIO_HAL.elf
+Finished building: default.size.stdout
+ 
+
+09:54:10 Build Finished. 0 errors, 0 warnings. (took 131ms)
+

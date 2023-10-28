@@ -1,0 +1,24 @@
+21:43:05 **** Build of configuration Debug for project i2c_test ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L010x4 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:24:13: warning: unused variable 'i' [-Wunused-variable]
+   24 |         int i = 0;
+      |             ^
+arm-none-eabi-gcc -o "i2c_test.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\origane\OneDrive - m.titech.ac.jp\08_rogy\2023_MFT\programming\L010\i2c_test\STM32L010F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="i2c_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: i2c_test.elf
+ 
+arm-none-eabi-size   i2c_test.elf 
+arm-none-eabi-objdump -h -S  i2c_test.elf  > "i2c_test.list"
+arm-none-eabi-objcopy  -O binary  i2c_test.elf  "i2c_test.bin"
+   text	   data	    bss	    dec	    hex	filename
+   1036	     12	   1572	   2620	    a3c	i2c_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: i2c_test.bin
+ 
+Finished building: i2c_test.list
+ 
+
+21:43:05 Build Finished. 0 errors, 1 warnings. (took 486ms)
+

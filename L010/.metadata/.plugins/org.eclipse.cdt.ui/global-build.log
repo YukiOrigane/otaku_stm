@@ -1,0 +1,24 @@
+00:15:49 **** Incremental Build of configuration Debug for project L010_swing ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L010x4 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:70:18: warning: unused variable 'dat' [-Wunused-variable]
+   70 |         uint32_t dat = I2C1->RXDR;
+      |                  ^~~
+arm-none-eabi-gcc -o "L010_swing.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\origane\OneDrive - m.titech.ac.jp\08_rogy\2023_MFT\programming\L010\L010_swing\STM32L010F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="L010_swing.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: L010_swing.elf
+ 
+arm-none-eabi-size   L010_swing.elf 
+arm-none-eabi-objdump -h -S  L010_swing.elf  > "L010_swing.list"
+arm-none-eabi-objcopy  -O ihex  L010_swing.elf  "L010_swing.hex"
+   text	   data	    bss	    dec	    hex	filename
+  16016	     12	   1632	  17660	   44fc	L010_swing.elf
+arm-none-eabi-objcopy  -O binary  L010_swing.elf  "L010_swing.bin"
+Finished building: default.size.stdout
+ 
+Finished building: L010_swing.hex
+Finished building: L010_swing.bin
+ 
+ 
+Finished building: L010_swing.list
+ 

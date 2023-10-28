@@ -1,0 +1,27 @@
+21:40:41 **** Incremental Build of configuration Debug for project I2c_test_multibyte ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L010x4 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:28:13: warning: unused variable 'i' [-Wunused-variable]
+   28 |         int i = 0;
+      |             ^
+arm-none-eabi-gcc -o "I2c_test_multibyte.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\origane\OneDrive - m.titech.ac.jp\08_rogy\2023_MFT\programming\L010\I2c_test_multibyte\STM32L010F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="I2c_test_multibyte.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: I2c_test_multibyte.elf
+ 
+arm-none-eabi-size   I2c_test_multibyte.elf 
+arm-none-eabi-objdump -h -S  I2c_test_multibyte.elf  > "I2c_test_multibyte.list"
+arm-none-eabi-objcopy  -O ihex  I2c_test_multibyte.elf  "I2c_test_multibyte.hex"
+   text	   data	    bss	    dec	    hex	filename
+   1416	     12	   1580	   3008	    bc0	I2c_test_multibyte.elf
+arm-none-eabi-objcopy  -O binary  I2c_test_multibyte.elf  "I2c_test_multibyte.bin"
+Finished building: default.size.stdout
+ 
+Finished building: I2c_test_multibyte.hex
+Finished building: I2c_test_multibyte.bin
+Finished building: I2c_test_multibyte.list
+ 
+ 
+ 
+
+21:40:42 Build Finished. 0 errors, 1 warnings. (took 382ms)
+
